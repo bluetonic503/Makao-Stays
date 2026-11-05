@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.example.com/</loc><lastmod>2026-11-04</lastmod><priority>1.0</priority></url>
+  <url><loc>https://www.example.com/locations/gigiri.html</loc><lastmod>2026-11-04</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/locations/karen.html</loc><lastmod>2026-11-04</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/locations/kileleshwa.html</loc><lastmod>2026-11-04</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/locations/kilimani.html</loc><lastmod>2026-11-04</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/locations/lavington.html</loc><lastmod>2026-11-04</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/locations/nairobi-cbd.html</loc><lastmod>2026-11-04</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/locations/parklands.html</loc><lastmod>2026-11-04</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/locations/ruaka.html</loc><lastmod>2026-11-04</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/locations/runda.html</loc><lastmod>2026-11-04</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/locations/south-b.html</loc><lastmod>2026-11-04</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/locations/south-c.html</loc><lastmod>2026-11-04</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/locations/syokimau.html</loc><lastmod>2026-11-04</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/locations/upper-hill.html</loc><lastmod>2026-11-04</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/locations/westlands.html</loc><lastmod>2026-11-04</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/pages/about.html</loc><lastmod>2026-11-04</lastmod><priority>0.5</priority></url>
+  <url><loc>https://www.example.com/pages/airbnb.html</loc><lastmod>2026-11-04</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/pages/airport-transfers.html</loc><lastmod>2026-11-04</lastmod><priority>0.5</priority></url>
+  <url><loc>https://www.example.com/pages/apartments.html</loc><lastmod>2026-11-04</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/pages/booking-policy.html</loc><lastmod>2026-11-04</lastmod><priority>0.5</priority></url>
+  <url><loc>https://www.example.com/pages/contact.html</loc><lastmod>2026-11-04</lastmod><priority>0.5</priority></url>
+  <url><loc>https://www.example.com/pages/explore-nairobi.html</loc><lastmod>2026-11-04</lastmod><priority>0.5</priority></url>
+  <url><loc>https://www.example.com/pages/hotels.html</loc><lastmod>2026-11-04</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/pages/houses.html</loc><lastmod>2026-11-04</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/pages/list-your-property.html</loc><lastmod>2026-11-04</lastmod><priority>0.5</priority></url>
+  <url><loc>https://www.example.com/pages/locations.html</loc><lastmod>2026-11-04</lastmod><priority>0.5</priority></url>
+  <url><loc>https://www.example.com/pages/privacy-policy.html</loc><lastmod>2026-11-04</lastmod><priority>0.5</priority></url>
+  <url><loc>https://www.example.com/pages/restaurants.html</loc><lastmod>2026-11-04</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/pages/stays.html</loc><lastmod>2026-11-04</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/pages/terms.html</loc><lastmod>2026-11-04</lastmod><priority>0.5</priority></url>
+</urlset>

@@ -1,0 +1,122 @@
+/* =============================================================================
+   RESPONSIVE — mobile-first enhancements.
+   600px  large phones / small tablets
+   900px  tablets / small laptops
+   1200px desktop navigation
+   ============================================================================= */
+
+/* hover lift must beat .reveal.in { transform:none } */
+.card.reveal.in:hover, .type-card.reveal.in:hover { transform: translateY(-4px); }
+
+/* Very small phones */
+@media (max-width: 380px) {
+  .field-row { grid-template-columns: 1fr; gap: 0; }
+  .trust-strip { grid-template-columns: 1fr; }
+  .logo__text { font-size: 1.25rem; }
+  .facts, .amenity-list, .times { grid-template-columns: 1fr; }
+}
+@media (max-width: 599px) {
+  .hide-sm { display: none; }
+  .filters__row { grid-template-columns: 1fr 1fr; }
+  .card__footer .btn { padding: 7px 12px; }
+}
+
+@media (min-width: 600px) {
+  :root { --gutter: 24px; }
+  .section { padding: 80px 0; }
+  .grid--cards { grid-template-columns: repeat(2, 1fr); }
+  .grid--types { grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .grid--locs { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .grid--cuisine { grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .grid--2 { grid-template-columns: repeat(2, 1fr); }
+  .grid--3 { grid-template-columns: repeat(2, 1fr); }
+  .grid--4 { grid-template-columns: repeat(2, 1fr); }
+  .steps { grid-template-columns: repeat(2, 1fr); row-gap: 28px; }
+  .search-card { grid-template-columns: 1fr 1fr; padding: 20px; }
+  .search-card .field--dest, .search-card .btn { grid-column: 1 / -1; }
+  .trust-strip { grid-template-columns: repeat(4, auto); justify-content: start; gap: 16px 28px; }
+  .filters__row { grid-template-columns: repeat(3, 1fr); }
+  .filters__row--3 { grid-template-columns: 1fr 1fr auto; }
+  .filters__row--chips .chips { flex: 1 1 auto; }
+  .gallery { grid-template-columns: repeat(4, 1fr); }
+  .gallery__item:nth-child(n + 4) { display: block; }
+  .gallery--5 .gallery__item:nth-child(n + 6) { display: none; }
+  .gallery--rest .gallery__item--main { grid-column: span 3; }
+  .gallery--rest .gallery__item { aspect-ratio: auto; }
+  .facts { grid-template-columns: repeat(4, 1fr); }
+  .amenity-list { grid-template-columns: repeat(3, 1fr); }
+  .footer__grid { grid-template-columns: repeat(4, 1fr); }
+  .contact-cards { grid-template-columns: 1fr 1fr; }
+  .modal { align-items: center; padding: 20px; }
+  .modal__dialog { border-radius: 22px; padding: 28px; }
+  .wa-float__label { display: inline; }
+  .wa-float { font-size: 1.5rem; padding: 0 22px 0 18px; }
+  .owner-cta { padding: 48px 40px; }
+}
+
+@media (min-width: 900px) {
+  .topbar__links { display: flex; }
+  .grid--cards { grid-template-columns: repeat(3, 1fr); gap: 26px; }
+  .grid--types { grid-template-columns: repeat(5, 1fr); }
+  .grid--locs { grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .grid--cuisine { grid-template-columns: repeat(6, 1fr); }
+  .grid--3 { grid-template-columns: repeat(3, 1fr); }
+  .grid--4 { grid-template-columns: repeat(4, 1fr); }
+  .steps { grid-template-columns: repeat(5, 1fr); gap: 18px; }
+  .hero { padding: 96px 0 72px; min-height: 640px; display: flex; align-items: center; }
+  .search-card { grid-template-columns: 1.5fr 1fr 1fr 0.8fr 1.1fr auto; align-items: end; padding: 14px 14px 14px 22px; border-radius: 22px; }
+  .search-card .field--dest, .search-card .btn { grid-column: auto; }
+  .search-card .btn { padding: 0 28px; }
+  .split { grid-template-columns: 1fr 1fr; gap: 56px; }
+  .split--reverse .split__media { order: 2; }
+  .owner-cta { grid-template-columns: 1.1fr 0.9fr; align-items: center; padding: 56px; }
+  .pd-layout { grid-template-columns: minmax(0, 1fr) 360px; gap: 48px; }
+  .pd-aside .book-card { position: sticky; top: calc(var(--header-h) + 20px); }
+  .mobile-book-bar { display: none; }
+  body.has-book-bar { padding-bottom: 0; }
+  body.has-book-bar .wa-float { bottom: 16px; }
+  .gallery--5 { grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 1fr); height: 480px; }
+  .gallery--5 .gallery__item { aspect-ratio: auto; }
+  .gallery--5 .gallery__item--main { grid-column: span 2; grid-row: span 2; }
+  .gallery--4 { grid-template-columns: 2fr 1fr; grid-template-rows: repeat(3, 1fr); height: 480px; }
+  .gallery--4 .gallery__item { aspect-ratio: auto; }
+  .gallery--4 .gallery__item--main { grid-column: 1; grid-row: span 3; }
+  .gallery--3 { grid-template-columns: 2fr 1fr; grid-template-rows: 1fr 1fr; height: 460px; }
+  .gallery--3 .gallery__item { aspect-ratio: auto; }
+  .gallery--3 .gallery__item--main { grid-column: 1; grid-row: span 2; }
+  .gallery--2 { grid-template-columns: 2fr 1fr; height: 420px; }
+  .gallery--2 .gallery__item { aspect-ratio: auto; }
+  .gallery--2 .gallery__item--main { grid-column: 1; }
+  .gallery--rest .gallery__item--main { grid-column: 1; }
+  .filters { padding: 20px 22px; }
+  .filters__row { grid-template-columns: repeat(6, 1fr); }
+  .filters__row--3 { grid-template-columns: 1fr 1.4fr auto; }
+  .prose-layout { grid-template-columns: 240px minmax(0, 1fr); gap: 56px; }
+  .toc { position: sticky; top: calc(var(--header-h) + 20px); }
+  .newsletter__inner { grid-template-columns: 1.2fr 1fr; gap: 40px; }
+  .footer__grid { grid-template-columns: 1.6fr repeat(4, 1fr); }
+  .footer__brand { grid-column: auto; }
+  .footer__bottom { grid-template-columns: auto 1fr; gap: 24px; }
+  .footer__disclaimer { text-align: right; justify-self: end; }
+  .page-hero { padding: 72px 0 64px; }
+  .contact-cards { grid-template-columns: 1fr; }
+}
+
+/* Desktop navigation */
+@media (min-width: 1200px) {
+  .nav { display: block; }
+  .hamburger { display: none; }
+  .header__cta { display: inline-flex; margin-left: 8px; }
+  .nav__dropdown:hover .dropdown, .nav__dropdown:focus-within .dropdown { opacity: 1; visibility: visible; transform: none; }
+}
+
+/* Large screens */
+@media (min-width: 1400px) {
+  :root { --container: 1320px; }
+}
+
+/* Print */
+@media print {
+  .topbar, .header, .wa-float, .newsletter, .footer, .mobile-book-bar, .filters, .btn { display: none !important; }
+  body { color: #000; }
+}
