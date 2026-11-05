@@ -33,6 +33,7 @@ All of these live in **`js/config.js`**, the single source of truth:
 | `currency.usdRate` / `rateUpdated` | `129` / `2026-11-01` | The current KES per 1 USD, and the date you set it |
 | `socials.*` | empty | Only accounts you actually own |
 | `showSampleListings` | `true` | Set to `false` once real listings are added |
+| `tracking.endpoint` | empty | **Your booking tracker URL.** Logs every booking request and enquiry to a Google Sheet. Setup: [docs/BOOKING-TRACKING.md](docs/BOOKING-TRACKING.md) |
 | `forms.*Endpoint` | empty | Optional: Formspree/Getform URLs (see §6) |
 
 ### Update the domain and brand inside the static HTML
@@ -93,7 +94,10 @@ Only in `js/config.js`. Every Book Now button, the floating WhatsApp button, the
 │   ├── locations.js            Neighbourhood guides
 │   └── taxonomy.js             Types, amenities, cuisines, price levels
 ├── images/                     Logo, favicons (put your own property photos here)
+├── docs/
+│   └── BOOKING-TRACKING.md     ★ How to track bookings in Google Sheets
 ├── tools/                      Optional Node helpers (not needed to run the site)
+│   └── booking-tracker/Code.gs Google Apps Script for the booking tracker sheet
 ├── sitemap.xml  robots.txt  site.webmanifest
 ```
 
@@ -178,6 +182,7 @@ Example generated message:
 ```
 Hello, I found your property on Makao Stays and would like to make a booking.
 
+Booking ref: MK-261115-7QF2
 Property: Skyline Serviced Suites
 Listing ref: westlands-skyline-serviced-suites
 Location: Westlands, Nairobi
@@ -191,6 +196,12 @@ Please confirm availability and send me the payment instructions.
 ```
 
 The listing ref lets you find the exact property in your data quickly.
+
+### Tracking bookings
+
+If `tracking.endpoint` is set, each request is also saved to your **Google Sheet booking tracker**, with a booking reference (e.g. `MK-261115-7QF2`) that also appears in the WhatsApp message. You can then move each request through **New → Contacted → Awaiting payment → Confirmed → Completed**, with a Summary tab and optional email alerts. Contact, airport-transfer, restaurant and list-your-property forms are logged on an **Enquiries** tab.
+
+Setup takes about 10 minutes: see **[docs/BOOKING-TRACKING.md](docs/BOOKING-TRACKING.md)**. Logging never blocks WhatsApp; if the sheet is unreachable, the guest's request still goes through.
 
 ---
 

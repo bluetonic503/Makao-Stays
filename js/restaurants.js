@@ -179,9 +179,15 @@
     const f = e.target;
     if (!f.date.value) { U.toast("Please choose a date."); f.date.focus(); return; }
     if (f.date.value < today) { U.toast("Please choose a date from today onwards."); f.date.focus(); return; }
+    const ref = Booking.newRef();
+    Booking.track("enquiry", {
+      ref, type: "Restaurant table", name: "", contact: "",
+      details: `${r.name} (${r.id}) · ${loc.name}\nDate: ${U.formatDate(f.date.value)} · Time: ${f.time.value || "Flexible"} · People: ${f.people.value}`,
+    });
     const msg = [
       `Hello ${CFG.siteName}, I found ${r.name} on your website and would like help with a table.`,
       "",
+      `Ref: ${ref}`,
       `Restaurant: ${r.name} (ref: ${r.id}${r.sample ? ", sample listing" : ""})`,
       `Area: ${loc.name}, Nairobi`,
       `Date: ${U.formatDate(f.date.value)}`,

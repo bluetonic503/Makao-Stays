@@ -33,7 +33,8 @@
     if (err) err.hidden = true;
 
     const data = {};
-    const lines = [form.dataset.intro || `Hello ${CFG.siteName},`, ""];
+    const ref = Booking.newRef();
+    const lines = [form.dataset.intro || `Hello ${CFG.siteName},`, "", `Ref: ${ref}`];
     U.$$("input, select, textarea", form).forEach((el) => {
       if (!el.name || el.name === "channel" || el.type === "submit") return;
       if ((el.type === "checkbox" || el.type === "radio") && !el.checked) return;
@@ -48,6 +49,15 @@
     });
     if (form.dataset.outro) lines.push("", form.dataset.outro);
     const message = lines.join("\n");
+
+    // copy to the booking log (Google Sheet), if configured
+    Booking.track("enquiry", {
+      ref,
+      type: form.dataset.track || "Website form",
+      name: data.name || "",
+      contact: [data.phone, data.email].filter(Boolean).join(" / "),
+      details: lines.slice(3).filter((l) => l !== "" && l !== form.dataset.outro).join("\n"),
+    });
 
     const endpoint = CFG.forms[form.dataset.endpoint || ""];
     const channel = (U.$("[name=channel]:checked", form) || {}).value || "whatsapp";

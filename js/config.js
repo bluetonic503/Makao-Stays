@@ -49,6 +49,14 @@ window.SITE_CONFIG = {
   // Set to false once you have real, verified listings so demo data disappears.
   showSampleListings: true,
 
+  /* Booking tracker ---------------------------------------------------------- */
+  // Every Book Now request and enquiry is copied to your Google Sheet so you can
+  // track it. Paste your Apps Script "Web app URL" here (ends in /exec).
+  // Setup guide: docs/BOOKING-TRACKING.md. Leave "" to disable.
+  tracking: {
+    endpoint: "",
+  },
+
   /* Optional form endpoints ------------------------------------------------- */
   // Leave "" to use the built-in fallbacks (WhatsApp / email).
   // Works with Formspree, Getform, Basin, Netlify Forms etc. (POST, JSON body).
